@@ -82,8 +82,6 @@ create.km.plot <- function(
 	right.padding = 0.1,
 	left.padding = 0.5,
 	return.statistics = FALSE,
-    xaxis.tck = 1,
-    yaxis.tck = 1,
 	height = 7, 
 	width = 7,
 	style = 'BoutrosLab', 
@@ -91,7 +89,8 @@ create.km.plot <- function(
 	size.units = 'in', 
 	enable.warnings = TRUE,
 	description = NULL,
-	use.legacy.settings = FALSE
+	use.legacy.settings = FALSE,
+    ...
 	) {
 
 	### INPUT VALIDATION ##########################################################################
@@ -879,8 +878,6 @@ create.km.plot <- function(
 		yat = yat,
 		xaxis.cex = xaxis.cex,
 		yaxis.cex = yaxis.cex,
-        xaxis.tck = xaxis.tck,
-        yaxis.tck = yaxis.tck,
 		type = c('s','p'),
 		cex = censoring.pch.cex, 
 		pch = c(rep('|', times = ngroups),rep('', times = ngroups)), 
@@ -955,6 +952,7 @@ create.km.plot <- function(
 			),
 		description = description,
 		use.legacy.settings = use.legacy.settings,
+        ...
 		);
 	km.plot$par.settings$layout.heights$key.top <- 1;
         km.plot$par.settings$layout.heights$key.bottom <- 1;
