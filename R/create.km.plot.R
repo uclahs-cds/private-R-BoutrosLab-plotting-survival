@@ -82,6 +82,8 @@ create.km.plot <- function(
 	right.padding = 0.1,
 	left.padding = 0.5,
 	return.statistics = FALSE,
+    xaxis.tck = 1,
+    yaxis.tck = 1,
 	height = 7, 
 	width = 7,
 	style = 'BoutrosLab', 
@@ -240,7 +242,7 @@ create.km.plot <- function(
 	if (ngroups > length(line.colours)) {
 		stop('There are not enough colours to plot each risk group in a different colour. Add more colours to the line.colours parameter or to the survival palette in default.colours.');
 		}
-  
+
 	# if the user hasn't set it, decide which statistical method to use
 	if (is.na(statistical.method) & is.null(predefined.p)) { 
 
@@ -877,6 +879,8 @@ create.km.plot <- function(
 		yat = yat,
 		xaxis.cex = xaxis.cex,
 		yaxis.cex = yaxis.cex,
+        xaxis.tck = xaxis.tck,
+        yaxis.tck = yaxis.tck,
 		type = c('s','p'),
 		cex = censoring.pch.cex, 
 		pch = c(rep('|', times = ngroups),rep('', times = ngroups)), 
