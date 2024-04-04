@@ -61,6 +61,8 @@ create.km.plot(
 	right.padding = 0.1,
 	left.padding = 0.5,
 	return.statistics = FALSE,
+    xaxis.tck = 1,
+    yaxis.tck = 1,
 	height = 7, 
 	width = 7, 
 	style = 'BoutrosLab',
@@ -130,6 +132,8 @@ create.km.plot(
   \item{right.padding}{A number specifying the distance to the right margin, defaults to 0.1}
   \item{left.padding}{A number specifying the distance to the left margin, defaults to 0.5.  This parameter (along with ylab.axis.padding) can be changed to make more space to display long group names in the risk table.}
   \item{return.statistics}{If TRUE, function will return a list containing trellis object (or 0/1 indicator) and relevant statistics.  If FALSE, no statistics are returned.  Defaults to FALSE.}
+  \item{xaxis.tck}{Length of tick marks on x-axis, defaults to 1}
+  \item{yaxis.tck}{Length of tick marks on y-axis, defaults to 1}
   \item{height}{Figure height in size.units}
   \item{width}{Figure width in size.units}
   \item{style}{defaults to \dQuote{BoutrosLab}, also accepts \dQuote{Nature}, which changes parameters according to Nature formatting requirements}
